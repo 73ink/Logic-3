@@ -19,8 +19,12 @@ public class practiceJava3 {
 //            System.out.println(result4[i]);
 //        }
         // task-5
-        int[] nums5 = {1, 2, 3};
-        System.out.println(p.no14(nums5));
+//        int[] nums5 = {1, 2, 3};
+//        System.out.println(p.no14(nums5));
+        // task-6
+        int[] nums6a = {1, 2, 3};
+        int[] nums6b = {2, 3, 10};
+        System.out.println(p.matchUp(nums6a, nums6b));   // 2
 
     }
 
@@ -79,6 +83,16 @@ public class practiceJava3 {
         else {
             return true;
         }
+    }
+    public int matchUp(int[] nums1, int[] nums2) {
+        int count = 0;
+        for (int i = 0; i < nums1.length; i++) {
+
+            if (nums1[i] != nums2[i] && Math.abs(nums1[i] - nums2[i]) <= 2) {
+                count++;
+            }
+        }
+        return count;
     }
 
 }
