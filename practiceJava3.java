@@ -38,10 +38,16 @@ public class practiceJava3 {
 //            System.out.println(result9[i]);
 //        }
         // task-10
-        int[] nums10 = {2, 4, 1, 2};
-        int[] result10 = p.post4(nums10);
-        for (int i = 0; i < result10.length; i++) {
-            System.out.println(result10[i]);
+//        int[] nums10 = {2, 4, 1, 2};
+//        int[] result10 = p.post4(nums10);
+//        for (int i = 0; i < result10.length; i++) {
+//            System.out.println(result10[i]);
+//        }
+        // task-11
+        int[] nums11 = {1, 10, 10, 2};
+        int[] result11 = p.withoutTen(nums11);
+        for (int i = 0; i < result11.length; i++) {
+            System.out.println(result11[i]);
         }
     }
 
@@ -149,6 +155,21 @@ public class practiceJava3 {
         for (int i = 0; i < result.length; i++) {
             result[i] = nums[lastIndex + 1 + i];
         }
+        return result;
+    }
+    public int[] withoutTen(int[] nums) {
+
+        int[] result = new int[nums.length];
+        int index = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] != 10) {
+                result[index] = nums[i];
+                index++;
+            }
+        }
+
         return result;
     }
 
