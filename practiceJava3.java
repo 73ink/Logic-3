@@ -44,11 +44,17 @@ public class practiceJava3 {
 //            System.out.println(result10[i]);
 //        }
         // task-11
-        int[] nums11 = {1, 10, 10, 2};
-        int[] result11 = p.withoutTen(nums11);
-        for (int i = 0; i < result11.length; i++) {
-            System.out.println(result11[i]);
+//        int[] nums11 = {1, 10, 10, 2};
+//        int[] result11 = p.withoutTen(nums11);
+//        for (int i = 0; i < result11.length; i++) {
+//            System.out.println(result11[i]);
+//        }
+        // task-12
+        String[] result12 = p.fizzBuzz(1, 6);
+        for (int i = 0; i < result12.length; i++) {
+            System.out.println(result12[i]);
         }
+
     }
 
     public int countEvens(int[] nums) {
@@ -168,6 +174,31 @@ public class practiceJava3 {
                 result[index] = nums[i];
                 index++;
             }
+        }
+
+        return result;
+    }
+    public String[] fizzBuzz(int start, int end) {
+
+        String[] result = new String[end - start];
+        int index = 0;
+
+        for (int i = start; i < end; i++) {
+
+            if (i % 3 == 0 && i % 5 == 0) {
+                result[index] = "FizzBuzz";
+            }
+            else if (i % 3 == 0) {
+                result[index] = "Fizz";
+            }
+            else if (i % 5 == 0) {
+                result[index] = "Buzz";
+            }
+            else {
+                result[index] = String.valueOf(i);
+            }
+
+            index++;
         }
 
         return result;
