@@ -22,9 +22,12 @@ public class practiceJava3 {
 //        int[] nums5 = {1, 2, 3};
 //        System.out.println(p.no14(nums5));
         // task-6
-        int[] nums6a = {1, 2, 3};
-        int[] nums6b = {2, 3, 10};
-        System.out.println(p.matchUp(nums6a, nums6b));   // 2
+//        int[] nums6a = {1, 2, 3};
+//        int[] nums6b = {2, 3, 10};
+//        System.out.println(p.matchUp(nums6a, nums6b));
+        // task-7
+        int[] nums7 = {2, 1, 3, 5};
+        System.out.println(p.modThree(nums7));
 
     }
 
@@ -93,6 +96,18 @@ public class practiceJava3 {
             }
         }
         return count;
+    }
+    public boolean modThree(int[] nums) {
+
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0) {
+                return true;
+            }
+            else if (nums[i] % 2 != 0 && nums[i + 1] % 2 != 0 && nums[i + 2] % 2 != 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
