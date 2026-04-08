@@ -32,10 +32,16 @@ public class practiceJava3 {
 //        int[] nums8 = {5, 6, 45, 99, 13, 5, 6};
 //        System.out.println(p.sameEnds(nums8, 2));
         // task-9
-        int[] nums9 = {6, 2, 5, 3};
-        int[] result9 = p.shiftLeft(nums9);
-        for (int i = 0; i < result9.length; i++) {
-            System.out.println(result9[i]);
+//        int[] nums9 = {6, 2, 5, 3};
+//        int[] result9 = p.shiftLeft(nums9);
+//        for (int i = 0; i < result9.length; i++) {
+//            System.out.println(result9[i]);
+//        }
+        // task-10
+        int[] nums10 = {2, 4, 1, 2};
+        int[] result10 = p.post4(nums10);
+        for (int i = 0; i < result10.length; i++) {
+            System.out.println(result10[i]);
         }
     }
 
@@ -132,6 +138,20 @@ public class practiceJava3 {
         nums[nums.length - 1] = first;
         return nums;
     }
+    public int[] post4(int[] nums) {
+        int lastIndex = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 4) {
+                lastIndex = i;
+            }
+        }
+        int[] result = new int[nums.length - lastIndex - 1];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = nums[lastIndex + 1 + i];
+        }
+        return result;
+    }
+
 
 
 }
