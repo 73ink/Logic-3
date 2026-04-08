@@ -11,8 +11,13 @@ public class practiceJava3 {
 //        int[] nums2 = {1, 2, 2, 1};
 //        System.out.println(p.sum13(nums2));
         // task-3
-        int[] nums3 = {0, 2, 4};
-        System.out.println(p.lucky13(nums3));
+//        int[] nums3 = {0, 2, 4};
+//        System.out.println(p.lucky13(nums3));
+        // task-4
+        int[] result4 = p.fizzArray(5);
+        for (int i = 0; i < result4.length; i++) {
+            System.out.println(result4[i]);
+        }
     }
 
     public int countEvens(int[] nums) {
@@ -44,6 +49,13 @@ public class practiceJava3 {
             }
         }
         return true;
+    }
+    public int[] fizzArray(int n) {
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = i;
+        }
+        return result;
     }
 
 }
