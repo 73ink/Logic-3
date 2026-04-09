@@ -9,9 +9,13 @@ public class practiceJava4 {
 //        int[] nums = {1, 2, 3, 4};
 //        System.out.println(t17.isEverywhere(nums, 1));
         // task-18
-        practiceJava4 t18 = new practiceJava4();
-        int[] nums = {1, 7, 7};
-        System.out.println(t18.has77(nums));
+//        practiceJava4 t18 = new practiceJava4();
+//        int[] nums = {1, 7, 7};
+//        System.out.println(t18.has77(nums));
+        // task-19
+        practiceJava4 t19 = new practiceJava4();
+        int[] nums = {3, 1, 3, 1, 3};
+        System.out.println(t19.haveThree(nums));
 
     }
 
@@ -47,5 +51,23 @@ public class practiceJava4 {
           }
         }
         return false;
+    }
+    public boolean haveThree(int[] nums){
+        int count = 0;
+        for (int i = 0; i < nums.length ; i++){
+            if (nums[i] == 3){
+                count++;
+
+                if (i < nums.length -1 && nums [i + 1] ==3){
+                    return false;
+                }
+            }
+        }
+        if (count == 3){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
