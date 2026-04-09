@@ -13,9 +13,14 @@ public class practiceJava4 {
 //        int[] nums = {1, 7, 7};
 //        System.out.println(t18.has77(nums));
         // task-19
-        practiceJava4 t19 = new practiceJava4();
-        int[] nums = {3, 1, 3, 1, 3};
-        System.out.println(t19.haveThree(nums));
+//        practiceJava4 t19 = new practiceJava4();
+//        int[] nums = {3, 1, 3, 1, 3};
+//        System.out.println(t19.haveThree(nums));
+        // task-20
+        practiceJava4 t20 = new practiceJava4();
+        int[] nums = {1, 4, 5, 6, 2};
+        System.out.println(t20.tripleUp(nums));   // true
+
 
     }
 
@@ -69,5 +74,13 @@ public class practiceJava4 {
         else{
             return false;
         }
+    }
+    public boolean tripleUp(int[] nums){
+        for (int i = 0; i < nums.length - 2; i++){
+            if (nums[i + 1] == nums[i] + 1 && nums[i + 2] == nums[i] + 2){
+                return true;
+            }
+        }
+        return false;
     }
 }
