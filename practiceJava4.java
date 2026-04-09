@@ -35,12 +35,16 @@ public class practiceJava4 {
 //            System.out.println(result[i]);
 //        }
         // task-23
-        practiceJava4 t23 = new practiceJava4();
-        int[] nums = {0, 5, 0, 3};
-        int[] result = t23.zeroMax(nums);
-        for (int i = 0; i < result.length; i++){
-            System.out.println(result[i]);
-        }
+//        practiceJava4 t23 = new practiceJava4();
+//        int[] nums = {0, 5, 0, 3};
+//        int[] result = t23.zeroMax(nums);
+//        for (int i = 0; i < result.length; i++){
+//            System.out.println(result[i]);
+//        }
+        // task-24
+        practiceJava4 t24 = new practiceJava4();
+        int[] nums = {1, 2, 3, 4, 100};
+        System.out.println(t24.centeredAverage(nums));
 
 
     }
@@ -161,6 +165,27 @@ public class practiceJava4 {
         }
 
         return nums;
+    }
+    public int centeredAverage(int[] nums){
+
+        int sum = 0;
+        int min = nums[0];
+        int max = nums[0];
+
+        for (int i = 0; i < nums.length; i++){
+
+            sum = sum + nums[i];
+
+            if (nums[i] < min){
+                min = nums[i];
+            }
+
+            if (nums[i] > max){
+                max = nums[i];
+            }
+        }
+
+        return (sum - min - max) / (nums.length - 2);
     }
 
 
