@@ -28,9 +28,16 @@ public class practiceJava4 {
 //            System.out.println(result[i]);
 //        }
         // task-22
-        practiceJava4 t22 = new practiceJava4();
-        int[] nums = {1, 2, 3};
-        int[] result = t22.notAlone(nums, 2);
+//        practiceJava4 t22 = new practiceJava4();
+//        int[] nums = {1, 2, 3};
+//        int[] result = t22.notAlone(nums, 2);
+//        for (int i = 0; i < result.length; i++){
+//            System.out.println(result[i]);
+//        }
+        // task-23
+        practiceJava4 t23 = new practiceJava4();
+        int[] nums = {0, 5, 0, 3};
+        int[] result = t23.zeroMax(nums);
         for (int i = 0; i < result.length; i++){
             System.out.println(result[i]);
         }
@@ -132,5 +139,29 @@ public class practiceJava4 {
 
         return nums;
     }
+    public int[] zeroMax(int[] nums){
+
+        for (int i = 0; i < nums.length; i++){
+
+            if (nums[i] == 0){
+
+                int maxOdd = 0;
+
+                for (int j = i + 1; j < nums.length; j++){
+
+                    if (nums[j] % 2 != 0 && nums[j] > maxOdd){
+                        maxOdd = nums[j];
+                    }
+                }
+
+                if (maxOdd != 0){
+                    nums[i] = maxOdd;
+                }
+            }
+        }
+
+        return nums;
+    }
+
 
 }
