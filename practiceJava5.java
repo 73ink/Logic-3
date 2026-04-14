@@ -4,8 +4,11 @@ public class practiceJava5 {
 //        practiceJava5 t1 = new practiceJava5();
 //        System.out.println(t1.makeBricks(3, 1, 8));
         // task-2
-        practiceJava5 t2 = new practiceJava5();
-        System.out.println(t2.noTeenSum(1, 2, 3));
+//        practiceJava5 t2 = new practiceJava5();
+//        System.out.println(t2.noTeenSum(1, 2, 3));
+        // task-3
+        practiceJava5 t3 = new practiceJava5();
+        System.out.println(t3.blackjack(19, 21));
 
 
 
@@ -42,6 +45,26 @@ public class practiceJava5 {
         }
         else{
             return n;
+        }
+    }
+    public int blackjack(int a, int b){
+
+        if (a > 21 && b > 21){
+            return 0;
+        }
+        else if (a > 21){
+            return b;
+        }
+        else if (b > 21){
+            return a;
+        }
+        else{
+            if (21 - a < 21 - b){
+                return a;
+            }
+            else{
+                return b;
+            }
         }
     }
 }
