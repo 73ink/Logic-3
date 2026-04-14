@@ -7,8 +7,11 @@ public class practiceJava5 {
 //        practiceJava5 t2 = new practiceJava5();
 //        System.out.println(t2.noTeenSum(1, 2, 3));
         // task-3
-        practiceJava5 t3 = new practiceJava5();
-        System.out.println(t3.blackjack(19, 21));
+//        practiceJava5 t3 = new practiceJava5();
+//        System.out.println(t3.blackjack(19, 21));
+        // task-4
+        practiceJava5 t4 = new practiceJava5();
+        System.out.println(t4.loneSum(1, 2, 3));
 
 
 
@@ -66,5 +69,23 @@ public class practiceJava5 {
                 return b;
             }
         }
+    }
+    public int loneSum(int a, int b, int c){
+
+        int sum = 0;
+
+        if (a != b && a != c){
+            sum = sum + a;
+        }
+
+        if (b != a && b != c){
+            sum = sum + b;
+        }
+
+        if (c != a && c != b){
+            sum = sum + c;
+        }
+
+        return sum;
     }
 }
