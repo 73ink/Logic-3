@@ -50,9 +50,15 @@ public class practiceJava4 {
 //        int [] nums = {1, 2, 2};
 //        System.out.println(t25.has22(nums));
         // task-26
-        practiceJava4 t26 = new practiceJava4();
-        int [] nums = {1, 4, 1};
-        System.out.println(t26.more14(nums));
+//        practiceJava4 t26 = new practiceJava4();
+//        int [] nums = {1, 4, 1};
+//        System.out.println(t26.more14(nums));
+        // task-27
+        practiceJava4 t27 = new practiceJava4();
+        String[] result = t27.fizzArray2(5);
+        for (int i = 0; i < result.length; i++){
+            System.out.println(result[i]);
+        }
 
 
     }
@@ -227,6 +233,16 @@ public class practiceJava4 {
         else{
             return false;
         }
+    }
+    public String[] fizzArray2(int n){
+
+        String[] result = new String[n];
+
+        for (int i = 0; i < n; i++){
+            result[i] = String.valueOf(i);
+        }
+
+        return result;
     }
 
 
