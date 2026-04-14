@@ -16,8 +16,11 @@ public class practiceJava5 {
 //        practiceJava5 t5 = new practiceJava5();
 //        System.out.println(t5.roundSum(12, 13, 14));
         // task-6
-        practiceJava5 t6 = new practiceJava5();
-        System.out.println(t6.evenlySpaced(2, 4, 6));
+//        practiceJava5 t6 = new practiceJava5();
+//        System.out.println(t6.evenlySpaced(2, 4, 6));
+        // task-7
+        practiceJava5 t7 = new practiceJava5();
+        System.out.println(t7.luckySum(1, 2, 3));
 
     }
     public boolean makeBricks(int small, int big, int goal){
@@ -137,6 +140,21 @@ public class practiceJava5 {
         }
         else{
             return false;
+        }
+    }
+    public int luckySum(int a, int b, int c){
+
+        if (a == 13){
+            return 0;
+        }
+        else if (b == 13){
+            return a;
+        }
+        else if (c == 13){
+            return a + b;
+        }
+        else{
+            return a + b + c;
         }
     }
 }
