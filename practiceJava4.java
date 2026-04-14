@@ -54,12 +54,15 @@ public class practiceJava4 {
 //        int [] nums = {1, 4, 1};
 //        System.out.println(t26.more14(nums));
         // task-27
-        practiceJava4 t27 = new practiceJava4();
-        String[] result = t27.fizzArray2(5);
-        for (int i = 0; i < result.length; i++){
-            System.out.println(result[i]);
-        }
-
+//        practiceJava4 t27 = new practiceJava4();
+//        String[] result = t27.fizzArray2(5);
+//        for (int i = 0; i < result.length; i++){
+//            System.out.println(result[i]);
+//        }
+        // task-28
+        practiceJava4 t28 = new practiceJava4();
+        int[] nums = {1, 2, 2};
+        System.out.println(t28.either24(nums));
 
     }
 
@@ -243,6 +246,29 @@ public class practiceJava4 {
         }
 
         return result;
+    }
+    public boolean either24(int[] nums){
+
+        boolean has22 = false;
+        boolean has44 = false;
+
+        for (int i = 0; i < nums.length - 1; i++){
+
+            if (nums[i] == 2 && nums[i + 1] == 2){
+                has22 = true;
+            }
+
+            if (nums[i] == 4 && nums[i + 1] == 4){
+                has44 = true;
+            }
+        }
+
+        if ((has22 == true && has44 == false) || (has22 == false && has44 == true)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
 
